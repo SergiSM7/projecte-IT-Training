@@ -21,3 +21,28 @@ function passaSeguent(objRebut){
     ObjPregSeg.classList.add("elementVisible");
 
 }
+
+function passaAnterior(objRebut){
+    //let idObjPare = document.getElementById(objRebut.parentElement.id);
+    //let ObjPare = document.getElementById(idObjPregAct);
+    let idObjPregAct = objRebut.parentElement.id;
+    let ObjPregAct = document.getElementById(idObjPregAct);
+    let colarticles = document.getElementsByTagName("article");
+    let idObjPregAnt;
+    // let ultimaPreg = false;
+    
+    for (let i = 0; i < colarticles.length; i++) {
+        if (colarticles[i].id == idObjPregAct){
+            idObjPregAnt = colarticles[i-1].id;
+            break;
+        };
+    }
+    
+
+    ObjPregAnt = document.getElementById(idObjPregAnt);
+    ObjPregAct.classList.remove("elementVisible");
+    ObjPregAct.classList.add("elementOcult");
+    ObjPregAnt.classList.remove("elementOcult");
+    ObjPregAnt.classList.add("elementVisible");
+
+}
