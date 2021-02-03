@@ -14,11 +14,14 @@ function passaSeguent(objRebut){
         };
     }
     
-    ObjPregSeg = document.getElementById(idObjPregSeg);
-    ObjPregAct.classList.remove("elementVisible");
-    ObjPregAct.classList.add("elementOcult");
-    ObjPregSeg.classList.remove("elementOcult");
-    ObjPregSeg.classList.add("elementVisible");
+    // ObjPregSeg = document.getElementById(idObjPregSeg);
+    // ObjPregAct.classList.remove("elementVisible");
+    // ObjPregAct.classList.add("elementOcult");
+    // ObjPregSeg.classList.remove("elementOcult");
+    // ObjPregSeg.classList.add("elementVisible");
+
+    amagaElement(idObjPregAct);
+    mostraElement(idObjPregSeg);
 
 }
 
@@ -39,10 +42,23 @@ function passaAnterior(objRebut){
     }
     
 
-    ObjPregAnt = document.getElementById(idObjPregAnt);
-    ObjPregAct.classList.remove("elementVisible");
-    ObjPregAct.classList.add("elementOcult");
-    ObjPregAnt.classList.remove("elementOcult");
-    ObjPregAnt.classList.add("elementVisible");
+    // ObjPregAnt = document.getElementById(idObjPregAnt);
+    // ObjPregAct.classList.remove("elementVisible");
+    // ObjPregAct.classList.add("elementOcult");
+    // ObjPregAnt.classList.remove("elementOcult");
+    // ObjPregAnt.classList.add("elementVisible");
 
+    amagaElement(idObjPregAct);
+    mostraElement(idObjPregAnt);
+    
+}
+
+function mostraElement(idRebut) {
+    document.getElementById(idRebut).classList.add("elementVisible");
+    document.getElementById(idRebut).classList.remove("elementOcult");
+}
+
+function amagaElement(idRebut) {
+    document.getElementById(idRebut).classList.remove("elementVisible");
+    document.getElementById(idRebut).classList.add("elementOcult");
 }
