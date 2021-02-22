@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>ITtraining</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="/css/estils.css">
+    <link rel="stylesheet" href="./css/estils.css">
   </head>
   <body>
     <header>
@@ -23,9 +23,11 @@
             <input type="text" id="resp-01" name="resposta-1" placeholder="Ut enim ad minima veniam" />
           </label>
         </div> <!-- FINAL <div class="respostes">-->
-        <button id="AquestBoto" onclick="passaAnterior(this)"><< Anterior</button>
-        <button id="AquestBoto" onclick="passaSeguent(this)">Següent >></button>
-      </article>
+          <div class="col2 centrat">
+            <button disabled onclick="passaAnterior(this)">&lt;&lt; Anterior</button>
+            <button onclick="passaSeguent(this)">Següent >></button>
+          </div>
+      </article> <!-- FINAL <article id="pregunta-01-tx"> -->
 
       <article id="pregunta-02-ch" class="elementOcult">
         <span class="titol">Pregunta #2 (checkbox)</span>
@@ -49,10 +51,12 @@
             <input type="checkbox" name="preg_002"/>
             <span>Et harum quidem rerum facilis est et expedita</span>
           </label>
-        </div>
-        <button id="AquestBoto" onclick="passaAnterior(this)"><< Anterior</button>
-        <button id="AquestBoto" onclick="passaSeguent(this)">Següent >></button>
-      </article>
+        </div> <!-- FINAL <div class="respostes">-->
+          <div class="centrat">
+            <button onclick="passaAnterior(this)">&lt;&lt; Anterior</button>
+            <button onclick="passaSeguent(this)">Següent >></button>
+          </div>
+      </article> <!-- FINAL <article id="pregunta-02-ch"> -->
 
       <article id="pregunta-03-ra" class="elementOcult">
         <span class="titol">Pregunta #3 (radio)</span>
@@ -77,8 +81,10 @@
             <span>Et harum quidem rerum facilis est et expedita</span>
           </label>
         </div> <!-- FINAL <div class="respostes">-->
-          <button id="AquestBoto" onclick="passaAnterior(this)"><< Anterior</button>
-          <button id="AquestBoto" onclick="passaSeguent(this)">Següent >></button>
+          <div class="centrat">
+            <button onclick="passaAnterior(this)">&lt;&lt; Anterior</button>
+            <button onclick="passaSeguent(this)">Següent >></button>
+          </div>
       </article> <!-- FINAL <article id="pregunta-03-ra"> -->
 
       <article id="pregunta-04-so" class="elementOcult">
@@ -96,56 +102,16 @@
             </select>
           </label>
         </div> <!-- FINAL <div class="respostes"> -->
-          <button id="AquestBoto" onclick="passaAnterior(this)"><< Anterior</button>
-          <button id="AquestBoto" onclick="passaSeguent(this)">Següent >></button>
+          <div class="centrat">
+            <button onclick="passaAnterior(this)">&lt;&lt; Anterior</button>
+            <button disabled onclick="passaSeguent(this)">Següent >></button>
+          </div>
       </article>  <!-- FINAL <article id="pregunta-04-so"> -->
     </main>  <!-- FINAL <main> -->
 
     <footer>
       <span>Designed and developed by DAW2© - 2020-2021 - All rights reserved</span>
     </footer>
-
     <script src="./js/moviments.js"></script>
   </body>
-
-
-  <!-- <script type="text/javascript">
-  function passaSeguent(objecteRebut) {
-    // let numeroPregActualText = objecteRebut.parentElement.id.charAt(9) +
-    //                            objecteRebut.parentElement.id.charAt(10);
-    // let numeroPregActualEnter = parseInt(numeroPregActualText);
-    // let numeroPregSegEnter = numeroPregActualEnter + 1;
-
-    // if (numeroPregSegText<10){
-    //   numeroPregSegText = "0" + numeroPregSegEnter.toString();
-    // } else {
-    //   numeroPregSegText = numeroPregSegEnter.toString();
-    // }
-
-    // let idPregAMostrar = "pregunta-" + numeroPregSegText + "-ch";
-
-    // let colleccioArticles;
-    // colleccioArticles = document.querySelectorAll("article");
-
-    // if (let index = 0; index < colleccioArticles.length; index++) {
-    //   if (colleccioArticles[index].id==idParent) {
-    //     idPregAMostrar = colleccioArticles[index+1].id;
-    //   }
-    // }
-
-    // pregAAmagar.classList.remove("elementVisible");
-    // pregAAmagar.classList.add("elementOcult");
-
-    // let numeroPregSegText = numeroPregSegEnter.toString();
-
-    let pregAAmagar = document.getElementById(objecteRebut.parentElement.id);
-    pregAAmagar.classList.remove("elementVisible");
-    pregAAmagar.classList.add("elementOcult");
-
-    // alert("Hola! :D");
-    // alert("L'ID és : " + objecteRebut.parentElement.id);
-
-  }
-  </script> -->
-
 </html>
